@@ -9,7 +9,7 @@ import org.json.JSONObject
 import java.io.IOException
 
 
-private const val API_KEY_GPT = "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"
+private const val API_KEY_GPT = "YOUR API KEY"
 private const val URL_GPT = "https://api.openai.com/v1/engines/text-davinci-003/completions"
 
 class GPTProcessor {
