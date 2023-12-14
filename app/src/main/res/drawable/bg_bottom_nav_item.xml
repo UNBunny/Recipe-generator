@@ -1,0 +1,15 @@
+<!-- bg_bottom_nav_item.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Состояние нажатия -->
+    <item android:state_checked="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/orange" /> <!-- Цвет круга при нажатии -->
+        </shape>
+    </item>
+    <!-- Состояние по умолчанию -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@android:color/transparent" /> <!-- Цвет по умолчанию для ненажатых элементов -->
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <com.qamar.curvedbottomnaviagtion.CurvedBottomNavigation
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cbn_background="@color/beige"
+        app:cbn_fabColor="@color/orange"
+        app:cbn_iconColor="@color/black"
+        app:cbn_height="76dp"
+        app:cbn_icon_size="30dp"
+        app:cbn_curve_radius="30dp"
+        app:cbn_selected_icon_size="48dp"
+        app:cbn_selectedIconColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--android:background="@drawable/my_gradient"-->
+<!--    >-->
+
+<!--&lt;!&ndash; Название сверху &ndash;&gt;-->
+<!--<TextView-->
+<!--    android:id="@+id/titleTextView"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="Receipt Generator"-->
+<!--    android:textColor="@color/black"-->
+<!--    android:textSize="24sp"-->
+<!--    app:layout_constraintTop_toTopOf="parent"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    android:layout_marginTop="50dp"/>-->
+
+<!--&lt;!&ndash; Кнопка сканирования QR-кода &ndash;&gt;-->
+
+<!--&lt;!&ndash; Панель Bottom Navigation &ndash;&gt;-->
+<!--<Button-->
+<!--    android:id="@+id/scanButton"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginTop="580dp"-->
+<!--    android:textColor="@color/white"-->
+<!--    android:backgroundTint="@color/black"-->
+<!--    android:text="Сканировать QR"-->
+<!--    app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintHorizontal_bias="0.498"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    app:layout_constraintTop_toBottomOf="@id/titleTextView"-->
+<!--    app:layout_constraintVertical_bias="0.0" />-->
+
+<!--<com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--    android:id="@+id/bottomNavigationView"-->
+<!--    android:layout_width="0dp"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    android:background="@color/beige"-->
+<!--    app:labelVisibilityMode="labeled"-->
+<!--    app:menu="@menu/bottom_menu" />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
