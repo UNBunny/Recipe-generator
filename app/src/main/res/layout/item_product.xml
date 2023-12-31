@@ -9,13 +9,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintHorizontal_bias="0.5"> <!-- Исправлено здесь -->
+
 
         <!-- Градиентный фон для CardView -->
         <LinearLayout

@@ -12,35 +12,38 @@
         android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:text="Choose Recipe"
         android:textColor="@color/black"
         android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Кнопка сканирования QR-кода -->
 
     <!-- Панель Bottom Navigation -->
+
+    <!-- ScrollView для текста -->
+
     <Button
         android:id="@+id/backButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="166dp"
+        android:layout_height="50dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="80dp"
         android:backgroundTint="@color/black"
         android:text="Restart"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/scrollView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleTextView"
         app:layout_constraintVertical_bias="0.0" />
 
-    <!-- ScrollView для текста -->
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="0dp"
@@ -75,4 +78,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleTextView"
         app:layout_constraintVertical_bias="0.879" />
+
+    <ImageButton
+        android:id="@+id/saveButton"
+        android:layout_width="87dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="112dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/save" />
 </androidx.constraintlayout.widget.ConstraintLayout>

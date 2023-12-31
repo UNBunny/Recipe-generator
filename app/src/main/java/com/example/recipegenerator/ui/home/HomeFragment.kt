@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -35,6 +36,7 @@ class HomeFragment : Fragment() {
     private lateinit var generateButton: Button
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: ItemAdapter
+    private lateinit var progressBar: ProgressBar
     private val namesList = ArrayList<String>()
     private var qrCodeResult: String? = null
     var textResult: String = ""
@@ -48,7 +50,7 @@ class HomeFragment : Fragment() {
 
         setupRecyclerView(view)
         setupButtons(view)
-
+        progressBar = view.findViewById(R.id.progressBar)
         return view
     }
 
@@ -68,6 +70,8 @@ class HomeFragment : Fragment() {
             qrCodeScanner()
         }
         generateButton.setOnClickListener {
+            adapter.updateData(mutableListOf())
+            showProgressBar()
             val gptProcessor = GPTProcessor() // Создание экземпляра класса GPTProcessor
             val coroutineScope = CoroutineScope(Dispatchers.Default)
             var result : String = ""
@@ -76,9 +80,12 @@ class HomeFragment : Fragment() {
                     gptProcessor.gptResponse(
                         "Помоги составить рецепт из данных продуктов: ${namesList!!.joinToString(", ")}." +
                                 " Напиши названия блюд (до 10) без рецепта. Разделяй рецепты ;"
-                    ).replace("\n", "").replace(":", "")
+                    ).replace("\n", "").replace(":", "").replace(Regex("[0-9]\\.\\s"), "")
                 val textResultArray = result.split(';').toMutableList()
-                replaceFragment(Home2Fragment(textResultArray))
+                withContext(Dispatchers.Main) {
+                    hideProgressBar()
+                    replaceFragment(Home2Fragment(textResultArray))
+                }
             }
         }
     }
@@ -155,5 +162,13 @@ class HomeFragment : Fragment() {
             .replace(R.id.fragmentContainer, fragment)
             .addToBackStack(null)
             .commit()
+    }
+
+    private fun showProgressBar() {
+        progressBar.visibility = View.VISIBLE // Показать ProgressBar
+    }
+
+    private fun hideProgressBar() {
+        progressBar.visibility = View.GONE // Скрыть ProgressBar
     }
 }

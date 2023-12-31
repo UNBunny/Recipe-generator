@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="16dp" /> <!-- Здесь 16dp - это радиус скругления -->
+    <solid android:color="@color/orange" /> <!-- Цвет фона вашего linkSquare -->
+</shape>
