@@ -1,3 +1,4 @@
+![6git](https://github.com/UNBunny/Recipe-generator/assets/112119548/131c57bd-8a23-41ce-9367-87a13bf3ac92)
 # Recipe Generator
 The Recipe Generator is an Android application designed to assist users in creating recipes based on scanned grocery items. This project combines various technologies and APIs to facilitate the generation of recipe ideas using artificial intelligence and QR-scanning.
 
