@@ -1,5 +1,5 @@
 # Recipe Generator
-The Recipe Generator is an Android application designed to assist users in creating recipes based on scanned grocery items or manually entered ingredients. This project combines various technologies and APIs to facilitate the generation of recipe ideas using artificial intelligence and barcode scanning.
+The Recipe Generator is an Android application designed to assist users in creating recipes based on scanned grocery items. This project combines various technologies and APIs to facilitate the generation of recipe ideas using artificial intelligence and QR-scanning.
 
 ## Features:
 * **QR Code Scanner Integration:** Utilizes the device's camera to scan QR codes from grocery receipts, fetching the items for recipe generation.
@@ -28,6 +28,3 @@ To use or contribute to this project:
 3. Build and run the application on an Android device or emulator.
 ## Contribution:
 Contributions to this project are welcome. If you have any suggestions, bug fixes, or feature enhancements, feel free to open an issue or create a pull request.
-
-## Acknowledgments:
-This project utilizes various open-source libraries and APIs. Special thanks to the contributors of these technologies for their valuable work.
